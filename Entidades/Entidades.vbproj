@@ -73,13 +73,21 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Alumnos.vb" />
+    <Compile Include="Area.vb" />
+    <Compile Include="Autor.vb" />
+    <Compile Include="Carrera.vb" />
+    <Compile Include="Ciclo.vb" />
+    <Compile Include="DatosPersonales.vb" />
+    <Compile Include="Editorial.vb" />
+    <Compile Include="Ejemplar.vb" />
+    <Compile Include="EstadoAlumno.vb" />
+    <Compile Include="EstadoEjemplar.vb" />
+    <Compile Include="EstadoPrestamo.vb" />
+    <Compile Include="Facultad.vb" />
+    <Compile Include="Idioma.vb" />
+    <Compile Include="Libro.vb" />
+    <Compile Include="ListaLibroPrestado.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -95,6 +103,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Prestamo.vb" />
+    <Compile Include="Sexo.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
