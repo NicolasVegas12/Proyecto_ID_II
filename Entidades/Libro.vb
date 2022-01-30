@@ -1,5 +1,5 @@
 ﻿Public Class Libro
-    Private BIM_IdLibro As Integer
+    Private BIM_IdLibro As Char
     Private BIM_Titulo As String
     Private BIM_FechaEdicion As Char
     Private BIM_IdEditorial As String
@@ -9,11 +9,11 @@
     Private BIM_IdArea As String
     'Getters y Setters
 
-    Public Property IdTitulo() As Integer
+    Public Property IdTitulo() As Char
         Get
             Return BIM_IdLibro
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As Char)
             BIM_IdLibro = value
         End Set
     End Property

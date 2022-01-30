@@ -77,10 +77,16 @@
     <Compile Include="AlumnosAD.vb" />
     <Compile Include="AreaAD.vb" />
     <Compile Include="AutorAD.vb" />
+    <Compile Include="CarreraAD.vb" />
+    <Compile Include="CicloAD.vb" />
     <Compile Include="Conexion.vb" />
+    <Compile Include="DatosPersonalesADvb.vb" />
     <Compile Include="EditorialAD.vb" />
     <Compile Include="EjemplarDA.vb" />
+    <Compile Include="EstadoAlumnoAD.vb" />
     <Compile Include="EstadoEjemplarDA.vb" />
+    <Compile Include="EstadoPrestamoAD.vb" />
+    <Compile Include="FacultadAD.vb" />
     <Compile Include="IdiomaAD.vb" />
     <Compile Include="LibroAD.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -98,6 +104,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PrestamoAD.vb" />
+    <Compile Include="SexoAD.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
