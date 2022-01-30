@@ -1,13 +1,13 @@
 ﻿Public Class Ejemplar
-    Private BIM_IdLibro As Integer
+    Private BIM_IdLibro As String
     Private BIM_IdEjemplar As Integer
-    Private BIM_IdEstadoE As Integer
+    Private BIM_IdEstadoE As String
     'Getters y Setters
-    Public Property IdLibro() As Integer
+    Public Property IdLibro() As String
         Get
             Return BIM_IdLibro
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             BIM_IdLibro = value
         End Set
     End Property
@@ -19,11 +19,11 @@
             BIM_IdEjemplar = value
         End Set
     End Property
-    Public Property IdEstadoE() As Integer
+    Public Property IdEstadoE() As String
         Get
             Return BIM_IdEstadoE
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             BIM_IdEstadoE = value
         End Set
     End Property

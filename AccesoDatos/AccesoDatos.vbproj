@@ -74,7 +74,14 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlumnosAD.vb" />
+    <Compile Include="AreaAD.vb" />
+    <Compile Include="AutorAD.vb" />
     <Compile Include="Conexion.vb" />
+    <Compile Include="EditorialAD.vb" />
+    <Compile Include="EjemplarDA.vb" />
+    <Compile Include="EstadoEjemplarDA.vb" />
+    <Compile Include="IdiomaAD.vb" />
     <Compile Include="LibroAD.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -111,6 +118,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.vbproj">
+      <Project>{a302659f-0014-43e7-8de1-9a9a7ab27464}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
