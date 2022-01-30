@@ -89,6 +89,7 @@
     <Compile Include="FacultadAD.vb" />
     <Compile Include="IdiomaAD.vb" />
     <Compile Include="LibroAD.vb" />
+    <Compile Include="ListaLibrosPrestadosAD.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

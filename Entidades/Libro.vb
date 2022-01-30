@@ -2,14 +2,14 @@
     Private BIM_IdLibro As Char
     Private BIM_Titulo As String
     Private BIM_FechaEdicion As Char
-    Private BIM_IdEditorial As String
+    Private BIM_IdEditorial As Integer
     Private BIM_Stock As Integer
-    Private BIM_IdIdioma As String
-    Private BIM_IdAutor As String
-    Private BIM_IdArea As String
+    Private BIM_IdIdioma As Integer
+    Private BIM_IdAutor As Integer
+    Private BIM_IdArea As Integer
     'Getters y Setters
 
-    Public Property IdTitulo() As Char
+    Public Property IdLibro() As Char
         Get
             Return BIM_IdLibro
         End Get
@@ -33,11 +33,11 @@
             BIM_FechaEdicion = value
         End Set
     End Property
-    Public Property IdEditorial() As String
+    Public Property IdEditorial() As Integer
         Get
             Return BIM_IdEditorial
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Integer)
             BIM_IdEditorial = value
         End Set
     End Property
@@ -49,27 +49,27 @@
             BIM_Stock = value
         End Set
     End Property
-    Public Property IdIdioma() As String
+    Public Property IdIdioma() As Integer
         Get
             Return BIM_IdIdioma
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Integer)
             BIM_IdIdioma = value
         End Set
     End Property
-    Public Property IdAutor() As String
+    Public Property IdAutor() As Integer
         Get
             Return BIM_IdAutor
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Integer)
             BIM_IdAutor = value
         End Set
     End Property
-    Public Property IdArea() As String
+    Public Property IdArea() As Integer
         Get
             Return BIM_IdArea
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Integer)
             BIM_IdArea = value
         End Set
     End Property
