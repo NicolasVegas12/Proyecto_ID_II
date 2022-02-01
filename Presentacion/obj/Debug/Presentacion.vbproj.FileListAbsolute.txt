@@ -1,0 +1,63 @@
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\obj\Debug\Presentacion.vbprojAssemblyReference.cache
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\obj\Debug\Presentacion.vbproj.GenerateResource.cache
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\obj\Debug\Presentacion.vbproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\bin\Debug\AccesoDatos.dll
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\bin\Debug\Entidades.dll
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\bin\Debug\LogicaNegocios.dll
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\bin\Debug\AccesoDatos.pdb
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\bin\Debug\AccesoDatos.xml
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\bin\Debug\AccesoDatos.dll.config
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\bin\Debug\Entidades.pdb
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\bin\Debug\Entidades.xml
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\bin\Debug\Entidades.dll.config
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\bin\Debug\LogicaNegocios.pdb
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\bin\Debug\LogicaNegocios.dll.config
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\obj\Debug\Presentacion.vbproj.CopyComplete
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Presentacion\obj\Debug\Presentacion.FrmBiblioteca.resources
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\bin\Debug\AccesoDatos.dll
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\bin\Debug\Entidades.dll
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\bin\Debug\LogicaNegocios.dll
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\bin\Debug\AccesoDatos.pdb
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\bin\Debug\AccesoDatos.xml
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\bin\Debug\AccesoDatos.dll.config
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\bin\Debug\Entidades.pdb
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\bin\Debug\Entidades.xml
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\bin\Debug\Entidades.dll.config
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\bin\Debug\LogicaNegocios.pdb
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\bin\Debug\LogicaNegocios.dll.config
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\obj\Debug\Presentacion.vbprojAssemblyReference.cache
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\obj\Debug\Presentacion.FrmBiblioteca.resources
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\obj\Debug\Presentacion.vbproj.GenerateResource.cache
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\obj\Debug\Presentacion.vbproj.CoreCompileInputs.cache
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\obj\Debug\Presentacion.vbproj.CopyComplete
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\Minenick\Escritorio\super-duper-octo-sniffle-main\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\bin\Debug\AccesoDatos.dll
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\bin\Debug\Entidades.dll
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\bin\Debug\LogicaNegocios.dll
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\bin\Debug\AccesoDatos.pdb
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\bin\Debug\AccesoDatos.xml
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\bin\Debug\AccesoDatos.dll.config
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\bin\Debug\Entidades.pdb
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\bin\Debug\Entidades.xml
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\bin\Debug\Entidades.dll.config
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\bin\Debug\LogicaNegocios.pdb
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\bin\Debug\LogicaNegocios.dll.config
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\obj\Debug\Presentacion.vbprojAssemblyReference.cache
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\obj\Debug\Presentacion.FrmBiblioteca.resources
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\obj\Debug\Presentacion.vbproj.GenerateResource.cache
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\obj\Debug\Presentacion.vbproj.CoreCompileInputs.cache
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\obj\Debug\Presentacion.vbproj.CopyComplete
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Presentacion\obj\Debug\Presentacion.pdb

@@ -6,4 +6,9 @@ Public Class AlumnosLN
         Dim objAlumnos As New AlumnosAD
         Return objAlumnos.LlenarAlumnos()
     End Function
+
+    Public Function ObtenerAlumnoLN(objA As String) As DataTable
+        Dim objAD As New AlumnosAD
+        Return objAD.ObtenerAlumno(objA)
+    End Function
 End Class

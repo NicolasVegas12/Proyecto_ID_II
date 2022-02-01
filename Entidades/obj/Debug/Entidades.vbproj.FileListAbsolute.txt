@@ -1,0 +1,11 @@
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Entidades\bin\Debug\Entidades.dll
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Entidades\bin\Debug\Entidades.pdb
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Entidades\bin\Debug\Entidades.xml
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Entidades\obj\Debug\Entidades.vbprojAssemblyReference.cache
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Entidades\obj\Debug\Entidades.Resources.resources
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Entidades\obj\Debug\Entidades.vbproj.GenerateResource.cache
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Entidades\obj\Debug\Entidades.vbproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Entidades\obj\Debug\Entidades.dll
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Entidades\obj\Debug\Entidades.xml
+C:\Users\User\Desktop\super-duper-octo-sniffle-main\Entidades\obj\Debug\Entidades.pdb

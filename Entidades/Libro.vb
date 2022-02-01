@@ -1,7 +1,7 @@
 ﻿Public Class Libro
     Private BIM_IdLibro As Char
     Private BIM_Titulo As String
-    Private BIM_FechaEdicion As Char
+    Private BIM_FechaEdicion As String
     Private BIM_IdEditorial As Integer
     Private BIM_Stock As Integer
     Private BIM_IdIdioma As Integer
@@ -25,11 +25,11 @@
             BIM_Titulo = value
         End Set
     End Property
-    Public Property FechaEdicion() As Char
+    Public Property FechaEdicion() As String
         Get
             Return BIM_FechaEdicion
         End Get
-        Set(ByVal value As Char)
+        Set(ByVal value As String)
             BIM_FechaEdicion = value
         End Set
     End Property
