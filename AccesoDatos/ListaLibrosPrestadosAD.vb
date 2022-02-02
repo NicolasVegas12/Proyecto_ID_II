@@ -12,9 +12,6 @@ Public Class ListaLibrosPrestadosAD
             With da.SelectCommand.Parameters
                 .Add("@NroCarnet", SqlDbType.Char).Value = objLibro.NroCarnet
                 .Add("@IdLibro", SqlDbType.Char).Value = objLibro.IdLibro
-                .Add("@IdEjemplar", SqlDbType.Char).Value = objLibro.IdEjemplar
-                .Add("@IdPrestamo", SqlDbType.Char).Value = objLibro.IdPrestamo
-                .Add("@IdEstadoP", SqlDbType.Int).Value = objLibro.IdEstadoP
                 .Add("@tipo", SqlDbType.Int).Value = 1
             End With
             cn.Open()
@@ -90,5 +87,25 @@ Public Class ListaLibrosPrestadosAD
             da.Dispose()
             cn.Close()
         End Try
+    End Function
+    Public Function ListarPrestamosXAlumno(nroCarnet As String) As DataTable
+        cn = conexion.conectar
+        Dim vsql As String
+        vsql = " EXEC sp_LibrosPrestados @tipo = 6, @NroCarnet=" & nroCarnet & ""
+        Dim da As New SqlDataAdapter(vsql, cn) ' se ejecutar en el servidor
+        ' Data Tabla contendra localmente los datos del SQLDataAdapter
+        Dim dt As New DataTable
+        da.Fill(dt)
+        Return dt
+    End Function
+    Public Function ListarLibrosxAlumno(nroCarnet As String) As DataTable
+        cn = conexion.conectar
+        Dim vsql As String
+        vsql = " EXEC sp_LibrosPrestados @tipo = 8, @NroCarnet=" & nroCarnet & ""
+        Dim da As New SqlDataAdapter(vsql, cn) ' se ejecutar en el servidor
+        ' Data Tabla contendra localmente los datos del SQLDataAdapter
+        Dim dt As New DataTable
+        da.Fill(dt)
+        Return dt
     End Function
 End Class

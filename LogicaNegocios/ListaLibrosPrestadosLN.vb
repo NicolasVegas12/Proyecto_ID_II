@@ -30,6 +30,14 @@ Public Class ListaLibrosPrestadosLN
         Dim objLibrosP As New ListaLibrosPrestadosAD
         Return objLibrosP.ListarLibrosPrestadosPendientes()
     End Function
+    Public Function ListarPrestamosXAlumnoLN(nroCodigo As String) As DataTable
+        Dim objLibrosP As New ListaLibrosPrestadosAD
+        Return objLibrosP.ListarPrestamosXAlumno(nroCodigo)
+    End Function
+    Public Function ListarLibrosXAlumnoLN(nroCodigo As String) As DataTable
+        Dim objLibrosP As New ListaLibrosPrestadosAD
+        Return objLibrosP.ListarLibrosxAlumno(nroCodigo)
+    End Function
     Public Function ReportarPerdidoLN(IdPrestamo As Char, IdLibro As String) As Boolean
         Try
             Dim objAD As New ListaLibrosPrestadosAD

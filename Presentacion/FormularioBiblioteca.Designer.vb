@@ -25,8 +25,6 @@ Partial Class FrmBiblioteca
         Me.TabBiblioteca = New System.Windows.Forms.TabControl()
         Me.TabAgregarLibro = New System.Windows.Forms.TabPage()
         Me.TxtEdicionAgre = New System.Windows.Forms.TextBox()
-        Me.TxtCodigoAgre = New System.Windows.Forms.TextBox()
-        Me.Label48 = New System.Windows.Forms.Label()
         Me.BtnAgregarLibro = New System.Windows.Forms.Button()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.TxtStockAgre = New System.Windows.Forms.TextBox()
@@ -96,7 +94,7 @@ Partial Class FrmBiblioteca
         Me.TxtCodigoDev = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.CheckedListBox3 = New System.Windows.Forms.CheckedListBox()
+        Me.ListBoxDev = New System.Windows.Forms.CheckedListBox()
         Me.TabPerdidaLibro = New System.Windows.Forms.TabPage()
         Me.BtnBuscarAlumnoPer = New System.Windows.Forms.Button()
         Me.TxtEstadoPer = New System.Windows.Forms.TextBox()
@@ -110,7 +108,8 @@ Partial Class FrmBiblioteca
         Me.TxtCodigoPer = New System.Windows.Forms.TextBox()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Button7 = New System.Windows.Forms.Button()
-        Me.CheckedListBox2 = New System.Windows.Forms.CheckedListBox()
+        Me.ListBox = New System.Windows.Forms.CheckedListBox()
+        Me.BtnLimpiar = New System.Windows.Forms.Button()
         Me.TabBiblioteca.SuspendLayout()
         Me.TabAgregarLibro.SuspendLayout()
         Me.TabEditarLibro.SuspendLayout()
@@ -128,7 +127,7 @@ Partial Class FrmBiblioteca
         Me.TabBiblioteca.Controls.Add(Me.TabPerdidaLibro)
         Me.TabBiblioteca.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabBiblioteca.Location = New System.Drawing.Point(0, 0)
-        Me.TabBiblioteca.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabBiblioteca.Margin = New System.Windows.Forms.Padding(4)
         Me.TabBiblioteca.Name = "TabBiblioteca"
         Me.TabBiblioteca.SelectedIndex = 0
         Me.TabBiblioteca.Size = New System.Drawing.Size(915, 566)
@@ -138,8 +137,6 @@ Partial Class FrmBiblioteca
         'TabAgregarLibro
         '
         Me.TabAgregarLibro.Controls.Add(Me.TxtEdicionAgre)
-        Me.TabAgregarLibro.Controls.Add(Me.TxtCodigoAgre)
-        Me.TabAgregarLibro.Controls.Add(Me.Label48)
         Me.TabAgregarLibro.Controls.Add(Me.BtnAgregarLibro)
         Me.TabAgregarLibro.Controls.Add(Me.Label34)
         Me.TabAgregarLibro.Controls.Add(Me.TxtStockAgre)
@@ -155,7 +152,7 @@ Partial Class FrmBiblioteca
         Me.TabAgregarLibro.Controls.Add(Me.CboEditorialAgre)
         Me.TabAgregarLibro.Controls.Add(Me.Label39)
         Me.TabAgregarLibro.Location = New System.Drawing.Point(4, 25)
-        Me.TabAgregarLibro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabAgregarLibro.Margin = New System.Windows.Forms.Padding(4)
         Me.TabAgregarLibro.Name = "TabAgregarLibro"
         Me.TabAgregarLibro.Size = New System.Drawing.Size(907, 537)
         Me.TabAgregarLibro.TabIndex = 3
@@ -165,33 +162,15 @@ Partial Class FrmBiblioteca
         'TxtEdicionAgre
         '
         Me.TxtEdicionAgre.Location = New System.Drawing.Point(225, 298)
-        Me.TxtEdicionAgre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtEdicionAgre.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtEdicionAgre.Name = "TxtEdicionAgre"
         Me.TxtEdicionAgre.Size = New System.Drawing.Size(160, 22)
         Me.TxtEdicionAgre.TabIndex = 48
         '
-        'TxtCodigoAgre
-        '
-        Me.TxtCodigoAgre.Location = New System.Drawing.Point(165, 62)
-        Me.TxtCodigoAgre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TxtCodigoAgre.Name = "TxtCodigoAgre"
-        Me.TxtCodigoAgre.Size = New System.Drawing.Size(115, 22)
-        Me.TxtCodigoAgre.TabIndex = 47
-        '
-        'Label48
-        '
-        Me.Label48.AutoSize = True
-        Me.Label48.Location = New System.Drawing.Point(104, 65)
-        Me.Label48.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(52, 17)
-        Me.Label48.TabIndex = 46
-        Me.Label48.Text = "Código"
-        '
         'BtnAgregarLibro
         '
         Me.BtnAgregarLibro.Location = New System.Drawing.Point(361, 370)
-        Me.BtnAgregarLibro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnAgregarLibro.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnAgregarLibro.Name = "BtnAgregarLibro"
         Me.BtnAgregarLibro.Size = New System.Drawing.Size(140, 28)
         Me.BtnAgregarLibro.TabIndex = 45
@@ -211,7 +190,7 @@ Partial Class FrmBiblioteca
         'TxtStockAgre
         '
         Me.TxtStockAgre.Location = New System.Drawing.Point(523, 298)
-        Me.TxtStockAgre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtStockAgre.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtStockAgre.Name = "TxtStockAgre"
         Me.TxtStockAgre.Size = New System.Drawing.Size(160, 22)
         Me.TxtStockAgre.TabIndex = 42
@@ -228,16 +207,16 @@ Partial Class FrmBiblioteca
         '
         'TxtTituloAgre
         '
-        Me.TxtTituloAgre.Location = New System.Drawing.Point(373, 62)
-        Me.TxtTituloAgre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtTituloAgre.Location = New System.Drawing.Point(164, 62)
+        Me.TxtTituloAgre.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtTituloAgre.Name = "TxtTituloAgre"
-        Me.TxtTituloAgre.Size = New System.Drawing.Size(359, 22)
+        Me.TxtTituloAgre.Size = New System.Drawing.Size(568, 22)
         Me.TxtTituloAgre.TabIndex = 40
         '
         'LblTitulo
         '
         Me.LblTitulo.AutoSize = True
-        Me.LblTitulo.Location = New System.Drawing.Point(319, 65)
+        Me.LblTitulo.Location = New System.Drawing.Point(99, 67)
         Me.LblTitulo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblTitulo.Name = "LblTitulo"
         Me.LblTitulo.Size = New System.Drawing.Size(43, 17)
@@ -249,7 +228,7 @@ Partial Class FrmBiblioteca
         Me.CboIdiomaAgre.FormattingEnabled = True
         Me.CboIdiomaAgre.Items.AddRange(New Object() {"1"})
         Me.CboIdiomaAgre.Location = New System.Drawing.Point(523, 240)
-        Me.CboIdiomaAgre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CboIdiomaAgre.Margin = New System.Windows.Forms.Padding(4)
         Me.CboIdiomaAgre.Name = "CboIdiomaAgre"
         Me.CboIdiomaAgre.Size = New System.Drawing.Size(160, 24)
         Me.CboIdiomaAgre.TabIndex = 38
@@ -269,7 +248,7 @@ Partial Class FrmBiblioteca
         Me.CboAreaAgre.FormattingEnabled = True
         Me.CboAreaAgre.Items.AddRange(New Object() {"1"})
         Me.CboAreaAgre.Location = New System.Drawing.Point(225, 240)
-        Me.CboAreaAgre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CboAreaAgre.Margin = New System.Windows.Forms.Padding(4)
         Me.CboAreaAgre.Name = "CboAreaAgre"
         Me.CboAreaAgre.Size = New System.Drawing.Size(160, 24)
         Me.CboAreaAgre.TabIndex = 36
@@ -289,7 +268,7 @@ Partial Class FrmBiblioteca
         Me.CboAutorAgre.FormattingEnabled = True
         Me.CboAutorAgre.Items.AddRange(New Object() {"1"})
         Me.CboAutorAgre.Location = New System.Drawing.Point(500, 153)
-        Me.CboAutorAgre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CboAutorAgre.Margin = New System.Windows.Forms.Padding(4)
         Me.CboAutorAgre.Name = "CboAutorAgre"
         Me.CboAutorAgre.Size = New System.Drawing.Size(232, 24)
         Me.CboAutorAgre.TabIndex = 34
@@ -309,7 +288,7 @@ Partial Class FrmBiblioteca
         Me.CboEditorialAgre.FormattingEnabled = True
         Me.CboEditorialAgre.Items.AddRange(New Object() {"1"})
         Me.CboEditorialAgre.Location = New System.Drawing.Point(165, 153)
-        Me.CboEditorialAgre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CboEditorialAgre.Margin = New System.Windows.Forms.Padding(4)
         Me.CboEditorialAgre.Name = "CboEditorialAgre"
         Me.CboEditorialAgre.Size = New System.Drawing.Size(237, 24)
         Me.CboEditorialAgre.TabIndex = 32
@@ -342,7 +321,7 @@ Partial Class FrmBiblioteca
         Me.TabEditarLibro.Controls.Add(Me.CboEditorialEdit)
         Me.TabEditarLibro.Controls.Add(Me.Label46)
         Me.TabEditarLibro.Location = New System.Drawing.Point(4, 25)
-        Me.TabEditarLibro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabEditarLibro.Margin = New System.Windows.Forms.Padding(4)
         Me.TabEditarLibro.Name = "TabEditarLibro"
         Me.TabEditarLibro.Size = New System.Drawing.Size(907, 537)
         Me.TabEditarLibro.TabIndex = 4
@@ -352,7 +331,7 @@ Partial Class FrmBiblioteca
         'TxtEdicionEdit
         '
         Me.TxtEdicionEdit.Location = New System.Drawing.Point(347, 311)
-        Me.TxtEdicionEdit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtEdicionEdit.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtEdicionEdit.Name = "TxtEdicionEdit"
         Me.TxtEdicionEdit.Size = New System.Drawing.Size(237, 22)
         Me.TxtEdicionEdit.TabIndex = 63
@@ -372,7 +351,7 @@ Partial Class FrmBiblioteca
         Me.CboCodigoEdit.FormattingEnabled = True
         Me.CboCodigoEdit.Items.AddRange(New Object() {"2272 - GAAAA", "ab12 - programacion 1"})
         Me.CboCodigoEdit.Location = New System.Drawing.Point(179, 57)
-        Me.CboCodigoEdit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CboCodigoEdit.Margin = New System.Windows.Forms.Padding(4)
         Me.CboCodigoEdit.Name = "CboCodigoEdit"
         Me.CboCodigoEdit.Size = New System.Drawing.Size(567, 24)
         Me.CboCodigoEdit.TabIndex = 61
@@ -380,7 +359,7 @@ Partial Class FrmBiblioteca
         'btnAgreLibro
         '
         Me.btnAgreLibro.Location = New System.Drawing.Point(375, 417)
-        Me.btnAgreLibro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnAgreLibro.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAgreLibro.Name = "btnAgreLibro"
         Me.btnAgreLibro.Size = New System.Drawing.Size(140, 28)
         Me.btnAgreLibro.TabIndex = 60
@@ -401,7 +380,7 @@ Partial Class FrmBiblioteca
         '
         Me.TxtTituloEdit.Enabled = False
         Me.TxtTituloEdit.Location = New System.Drawing.Point(179, 116)
-        Me.TxtTituloEdit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtTituloEdit.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtTituloEdit.Name = "TxtTituloEdit"
         Me.TxtTituloEdit.Size = New System.Drawing.Size(142, 22)
         Me.TxtTituloEdit.TabIndex = 55
@@ -420,7 +399,7 @@ Partial Class FrmBiblioteca
         '
         Me.CboIdiomaEdit.FormattingEnabled = True
         Me.CboIdiomaEdit.Location = New System.Drawing.Point(513, 244)
-        Me.CboIdiomaEdit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CboIdiomaEdit.Margin = New System.Windows.Forms.Padding(4)
         Me.CboIdiomaEdit.Name = "CboIdiomaEdit"
         Me.CboIdiomaEdit.Size = New System.Drawing.Size(232, 24)
         Me.CboIdiomaEdit.TabIndex = 53
@@ -439,7 +418,7 @@ Partial Class FrmBiblioteca
         '
         Me.CboAreaEdit.FormattingEnabled = True
         Me.CboAreaEdit.Location = New System.Drawing.Point(179, 244)
-        Me.CboAreaEdit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CboAreaEdit.Margin = New System.Windows.Forms.Padding(4)
         Me.CboAreaEdit.Name = "CboAreaEdit"
         Me.CboAreaEdit.Size = New System.Drawing.Size(237, 24)
         Me.CboAreaEdit.TabIndex = 51
@@ -458,7 +437,7 @@ Partial Class FrmBiblioteca
         '
         Me.CboAutorEdit.FormattingEnabled = True
         Me.CboAutorEdit.Location = New System.Drawing.Point(513, 174)
-        Me.CboAutorEdit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CboAutorEdit.Margin = New System.Windows.Forms.Padding(4)
         Me.CboAutorEdit.Name = "CboAutorEdit"
         Me.CboAutorEdit.Size = New System.Drawing.Size(232, 24)
         Me.CboAutorEdit.TabIndex = 49
@@ -478,7 +457,7 @@ Partial Class FrmBiblioteca
         Me.CboEditorialEdit.FormattingEnabled = True
         Me.CboEditorialEdit.Items.AddRange(New Object() {"1", "2", "3"})
         Me.CboEditorialEdit.Location = New System.Drawing.Point(179, 174)
-        Me.CboEditorialEdit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CboEditorialEdit.Margin = New System.Windows.Forms.Padding(4)
         Me.CboEditorialEdit.Name = "CboEditorialEdit"
         Me.CboEditorialEdit.Size = New System.Drawing.Size(237, 24)
         Me.CboEditorialEdit.TabIndex = 47
@@ -495,6 +474,7 @@ Partial Class FrmBiblioteca
         '
         'TabPrestamoLibro
         '
+        Me.TabPrestamoLibro.Controls.Add(Me.BtnLimpiar)
         Me.TabPrestamoLibro.Controls.Add(Me.BtnBuscarAlumnoPre)
         Me.TabPrestamoLibro.Controls.Add(Me.BtnPrestar)
         Me.TabPrestamoLibro.Controls.Add(Me.ListBoxLibros)
@@ -520,9 +500,9 @@ Partial Class FrmBiblioteca
         Me.TabPrestamoLibro.Controls.Add(Me.TxtCodigoPre)
         Me.TabPrestamoLibro.Controls.Add(Me.Label1)
         Me.TabPrestamoLibro.Location = New System.Drawing.Point(4, 25)
-        Me.TabPrestamoLibro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPrestamoLibro.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPrestamoLibro.Name = "TabPrestamoLibro"
-        Me.TabPrestamoLibro.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPrestamoLibro.Padding = New System.Windows.Forms.Padding(4)
         Me.TabPrestamoLibro.Size = New System.Drawing.Size(907, 537)
         Me.TabPrestamoLibro.TabIndex = 0
         Me.TabPrestamoLibro.Text = "Préstamo"
@@ -531,7 +511,7 @@ Partial Class FrmBiblioteca
         'BtnBuscarAlumnoPre
         '
         Me.BtnBuscarAlumnoPre.Location = New System.Drawing.Point(317, 48)
-        Me.BtnBuscarAlumnoPre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnBuscarAlumnoPre.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnBuscarAlumnoPre.Name = "BtnBuscarAlumnoPre"
         Me.BtnBuscarAlumnoPre.Size = New System.Drawing.Size(77, 28)
         Me.BtnBuscarAlumnoPre.TabIndex = 32
@@ -541,11 +521,11 @@ Partial Class FrmBiblioteca
         'BtnPrestar
         '
         Me.BtnPrestar.Location = New System.Drawing.Point(396, 480)
-        Me.BtnPrestar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnPrestar.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnPrestar.Name = "BtnPrestar"
         Me.BtnPrestar.Size = New System.Drawing.Size(100, 28)
         Me.BtnPrestar.TabIndex = 30
-        Me.BtnPrestar.Text = "Jaja prestar"
+        Me.BtnPrestar.Text = "Prestar libro"
         Me.BtnPrestar.UseVisualStyleBackColor = True
         '
         'ListBoxLibros
@@ -553,7 +533,7 @@ Partial Class FrmBiblioteca
         Me.ListBoxLibros.FormattingEnabled = True
         Me.ListBoxLibros.Items.AddRange(New Object() {"Gaaa", "1", "2", "3"})
         Me.ListBoxLibros.Location = New System.Drawing.Point(109, 348)
-        Me.ListBoxLibros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ListBoxLibros.Margin = New System.Windows.Forms.Padding(4)
         Me.ListBoxLibros.Name = "ListBoxLibros"
         Me.ListBoxLibros.Size = New System.Drawing.Size(644, 106)
         Me.ListBoxLibros.TabIndex = 28
@@ -562,7 +542,7 @@ Partial Class FrmBiblioteca
         '
         Me.TxtEstadoPre.Enabled = False
         Me.TxtEstadoPre.Location = New System.Drawing.Point(680, 96)
-        Me.TxtEstadoPre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtEstadoPre.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtEstadoPre.Name = "TxtEstadoPre"
         Me.TxtEstadoPre.ReadOnly = True
         Me.TxtEstadoPre.Size = New System.Drawing.Size(159, 22)
@@ -582,7 +562,7 @@ Partial Class FrmBiblioteca
         '
         Me.TxtCarreraPre.Enabled = False
         Me.TxtCarreraPre.Location = New System.Drawing.Point(623, 50)
-        Me.TxtCarreraPre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCarreraPre.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCarreraPre.Name = "TxtCarreraPre"
         Me.TxtCarreraPre.ReadOnly = True
         Me.TxtCarreraPre.Size = New System.Drawing.Size(216, 22)
@@ -602,7 +582,7 @@ Partial Class FrmBiblioteca
         '
         Me.TxtCicloPre.Enabled = False
         Me.TxtCicloPre.Location = New System.Drawing.Point(472, 50)
-        Me.TxtCicloPre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCicloPre.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCicloPre.Name = "TxtCicloPre"
         Me.TxtCicloPre.ReadOnly = True
         Me.TxtCicloPre.Size = New System.Drawing.Size(57, 22)
@@ -620,19 +600,19 @@ Partial Class FrmBiblioteca
         '
         'BtnAplicarFiltros
         '
-        Me.BtnAplicarFiltros.Location = New System.Drawing.Point(348, 290)
-        Me.BtnAplicarFiltros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnAplicarFiltros.Location = New System.Drawing.Point(317, 288)
+        Me.BtnAplicarFiltros.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnAplicarFiltros.Name = "BtnAplicarFiltros"
-        Me.BtnAplicarFiltros.Size = New System.Drawing.Size(187, 28)
+        Me.BtnAplicarFiltros.Size = New System.Drawing.Size(111, 28)
         Me.BtnAplicarFiltros.TabIndex = 16
-        Me.BtnAplicarFiltros.Text = "Aplicar Filtros"
+        Me.BtnAplicarFiltros.Text = "Buscar"
         Me.BtnAplicarFiltros.UseVisualStyleBackColor = True
         '
         'CboIdioma
         '
         Me.CboIdioma.FormattingEnabled = True
         Me.CboIdioma.Location = New System.Drawing.Point(543, 241)
-        Me.CboIdioma.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CboIdioma.Margin = New System.Windows.Forms.Padding(4)
         Me.CboIdioma.Name = "CboIdioma"
         Me.CboIdioma.Size = New System.Drawing.Size(160, 24)
         Me.CboIdioma.TabIndex = 15
@@ -651,7 +631,7 @@ Partial Class FrmBiblioteca
         '
         Me.CboArea.FormattingEnabled = True
         Me.CboArea.Location = New System.Drawing.Point(245, 241)
-        Me.CboArea.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CboArea.Margin = New System.Windows.Forms.Padding(4)
         Me.CboArea.Name = "CboArea"
         Me.CboArea.Size = New System.Drawing.Size(160, 24)
         Me.CboArea.TabIndex = 13
@@ -670,7 +650,7 @@ Partial Class FrmBiblioteca
         '
         Me.CboAutor.FormattingEnabled = True
         Me.CboAutor.Location = New System.Drawing.Point(543, 187)
-        Me.CboAutor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CboAutor.Margin = New System.Windows.Forms.Padding(4)
         Me.CboAutor.Name = "CboAutor"
         Me.CboAutor.Size = New System.Drawing.Size(160, 24)
         Me.CboAutor.TabIndex = 11
@@ -689,7 +669,7 @@ Partial Class FrmBiblioteca
         '
         Me.CboEditorial.FormattingEnabled = True
         Me.CboEditorial.Location = New System.Drawing.Point(245, 187)
-        Me.CboEditorial.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CboEditorial.Margin = New System.Windows.Forms.Padding(4)
         Me.CboEditorial.Name = "CboEditorial"
         Me.CboEditorial.Size = New System.Drawing.Size(160, 24)
         Me.CboEditorial.TabIndex = 9
@@ -728,7 +708,7 @@ Partial Class FrmBiblioteca
         '
         Me.TxtNombrePre.Enabled = False
         Me.TxtNombrePre.Location = New System.Drawing.Point(136, 96)
-        Me.TxtNombrePre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombrePre.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombrePre.Name = "TxtNombrePre"
         Me.TxtNombrePre.ReadOnly = True
         Me.TxtNombrePre.Size = New System.Drawing.Size(436, 22)
@@ -747,7 +727,7 @@ Partial Class FrmBiblioteca
         'TxtCodigoPre
         '
         Me.TxtCodigoPre.Location = New System.Drawing.Point(136, 50)
-        Me.TxtCodigoPre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCodigoPre.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCodigoPre.Name = "TxtCodigoPre"
         Me.TxtCodigoPre.Size = New System.Drawing.Size(164, 22)
         Me.TxtCodigoPre.TabIndex = 1
@@ -755,12 +735,12 @@ Partial Class FrmBiblioteca
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(55, 54)
+        Me.Label1.Location = New System.Drawing.Point(31, 53)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 17)
+        Me.Label1.Size = New System.Drawing.Size(88, 17)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Código"
+        Me.Label1.Text = "NroMatricula"
         '
         'TabDevolucionLibro
         '
@@ -777,11 +757,11 @@ Partial Class FrmBiblioteca
         Me.TabDevolucionLibro.Controls.Add(Me.TxtCodigoDev)
         Me.TabDevolucionLibro.Controls.Add(Me.Label16)
         Me.TabDevolucionLibro.Controls.Add(Me.Button2)
-        Me.TabDevolucionLibro.Controls.Add(Me.CheckedListBox3)
+        Me.TabDevolucionLibro.Controls.Add(Me.ListBoxDev)
         Me.TabDevolucionLibro.Location = New System.Drawing.Point(4, 25)
-        Me.TabDevolucionLibro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabDevolucionLibro.Margin = New System.Windows.Forms.Padding(4)
         Me.TabDevolucionLibro.Name = "TabDevolucionLibro"
-        Me.TabDevolucionLibro.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabDevolucionLibro.Padding = New System.Windows.Forms.Padding(4)
         Me.TabDevolucionLibro.Size = New System.Drawing.Size(907, 537)
         Me.TabDevolucionLibro.TabIndex = 1
         Me.TabDevolucionLibro.Text = "Devolución"
@@ -790,17 +770,17 @@ Partial Class FrmBiblioteca
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(396, 398)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(144, 28)
         Me.Button3.TabIndex = 76
-        Me.Button3.Text = "Jaja prestado"
+        Me.Button3.Text = "Devolver Prestamo"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'BtnBuscarAlumnoDev
         '
         Me.BtnBuscarAlumnoDev.Location = New System.Drawing.Point(327, 49)
-        Me.BtnBuscarAlumnoDev.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnBuscarAlumnoDev.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnBuscarAlumnoDev.Name = "BtnBuscarAlumnoDev"
         Me.BtnBuscarAlumnoDev.Size = New System.Drawing.Size(77, 28)
         Me.BtnBuscarAlumnoDev.TabIndex = 75
@@ -811,7 +791,7 @@ Partial Class FrmBiblioteca
         '
         Me.TxtEstadoDev.Enabled = False
         Me.TxtEstadoDev.Location = New System.Drawing.Point(689, 97)
-        Me.TxtEstadoDev.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtEstadoDev.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtEstadoDev.Name = "TxtEstadoDev"
         Me.TxtEstadoDev.ReadOnly = True
         Me.TxtEstadoDev.Size = New System.Drawing.Size(159, 22)
@@ -831,7 +811,7 @@ Partial Class FrmBiblioteca
         '
         Me.TxtCarreraDev.Enabled = False
         Me.TxtCarreraDev.Location = New System.Drawing.Point(632, 52)
-        Me.TxtCarreraDev.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCarreraDev.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCarreraDev.Name = "TxtCarreraDev"
         Me.TxtCarreraDev.ReadOnly = True
         Me.TxtCarreraDev.Size = New System.Drawing.Size(216, 22)
@@ -851,7 +831,7 @@ Partial Class FrmBiblioteca
         '
         Me.TxtCicloDev.Enabled = False
         Me.TxtCicloDev.Location = New System.Drawing.Point(481, 52)
-        Me.TxtCicloDev.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCicloDev.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCicloDev.Name = "TxtCicloDev"
         Me.TxtCicloDev.ReadOnly = True
         Me.TxtCicloDev.Size = New System.Drawing.Size(57, 22)
@@ -871,7 +851,7 @@ Partial Class FrmBiblioteca
         '
         Me.TxtNombreDev.Enabled = False
         Me.TxtNombreDev.Location = New System.Drawing.Point(145, 97)
-        Me.TxtNombreDev.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombreDev.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombreDev.Name = "TxtNombreDev"
         Me.TxtNombreDev.ReadOnly = True
         Me.TxtNombreDev.Size = New System.Drawing.Size(436, 22)
@@ -890,7 +870,7 @@ Partial Class FrmBiblioteca
         'TxtCodigoDev
         '
         Me.TxtCodigoDev.Location = New System.Drawing.Point(145, 52)
-        Me.TxtCodigoDev.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCodigoDev.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCodigoDev.Name = "TxtCodigoDev"
         Me.TxtCodigoDev.Size = New System.Drawing.Size(164, 22)
         Me.TxtCodigoDev.TabIndex = 66
@@ -908,22 +888,22 @@ Partial Class FrmBiblioteca
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(395, 530)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(144, 28)
         Me.Button2.TabIndex = 42
         Me.Button2.Text = "Jaja devolver"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'CheckedListBox3
+        'ListBoxDev
         '
-        Me.CheckedListBox3.FormattingEnabled = True
-        Me.CheckedListBox3.Items.AddRange(New Object() {"Gaaa", "1", "2", "3"})
-        Me.CheckedListBox3.Location = New System.Drawing.Point(128, 235)
-        Me.CheckedListBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.CheckedListBox3.Name = "CheckedListBox3"
-        Me.CheckedListBox3.Size = New System.Drawing.Size(644, 106)
-        Me.CheckedListBox3.TabIndex = 41
+        Me.ListBoxDev.FormattingEnabled = True
+        Me.ListBoxDev.Items.AddRange(New Object() {"Gaaa", "1", "2", "3"})
+        Me.ListBoxDev.Location = New System.Drawing.Point(128, 235)
+        Me.ListBoxDev.Margin = New System.Windows.Forms.Padding(4)
+        Me.ListBoxDev.Name = "ListBoxDev"
+        Me.ListBoxDev.Size = New System.Drawing.Size(644, 106)
+        Me.ListBoxDev.TabIndex = 41
         '
         'TabPerdidaLibro
         '
@@ -939,9 +919,9 @@ Partial Class FrmBiblioteca
         Me.TabPerdidaLibro.Controls.Add(Me.TxtCodigoPer)
         Me.TabPerdidaLibro.Controls.Add(Me.Label33)
         Me.TabPerdidaLibro.Controls.Add(Me.Button7)
-        Me.TabPerdidaLibro.Controls.Add(Me.CheckedListBox2)
+        Me.TabPerdidaLibro.Controls.Add(Me.ListBox)
         Me.TabPerdidaLibro.Location = New System.Drawing.Point(4, 25)
-        Me.TabPerdidaLibro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabPerdidaLibro.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPerdidaLibro.Name = "TabPerdidaLibro"
         Me.TabPerdidaLibro.Size = New System.Drawing.Size(907, 537)
         Me.TabPerdidaLibro.TabIndex = 2
@@ -951,7 +931,7 @@ Partial Class FrmBiblioteca
         'BtnBuscarAlumnoPer
         '
         Me.BtnBuscarAlumnoPer.Location = New System.Drawing.Point(320, 46)
-        Me.BtnBuscarAlumnoPer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnBuscarAlumnoPer.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnBuscarAlumnoPer.Name = "BtnBuscarAlumnoPer"
         Me.BtnBuscarAlumnoPer.Size = New System.Drawing.Size(77, 28)
         Me.BtnBuscarAlumnoPer.TabIndex = 99
@@ -962,7 +942,7 @@ Partial Class FrmBiblioteca
         '
         Me.TxtEstadoPer.Enabled = False
         Me.TxtEstadoPer.Location = New System.Drawing.Point(683, 94)
-        Me.TxtEstadoPer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtEstadoPer.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtEstadoPer.Name = "TxtEstadoPer"
         Me.TxtEstadoPer.ReadOnly = True
         Me.TxtEstadoPer.Size = New System.Drawing.Size(159, 22)
@@ -982,7 +962,7 @@ Partial Class FrmBiblioteca
         '
         Me.TxtCarreraPer.Enabled = False
         Me.TxtCarreraPer.Location = New System.Drawing.Point(625, 48)
-        Me.TxtCarreraPer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCarreraPer.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCarreraPer.Name = "TxtCarreraPer"
         Me.TxtCarreraPer.ReadOnly = True
         Me.TxtCarreraPer.Size = New System.Drawing.Size(216, 22)
@@ -1002,7 +982,7 @@ Partial Class FrmBiblioteca
         '
         Me.TxtCicloPer.Enabled = False
         Me.TxtCicloPer.Location = New System.Drawing.Point(475, 48)
-        Me.TxtCicloPer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCicloPer.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCicloPer.Name = "TxtCicloPer"
         Me.TxtCicloPer.ReadOnly = True
         Me.TxtCicloPer.Size = New System.Drawing.Size(57, 22)
@@ -1022,7 +1002,7 @@ Partial Class FrmBiblioteca
         '
         Me.TxtNombrePer.Enabled = False
         Me.TxtNombrePer.Location = New System.Drawing.Point(139, 94)
-        Me.TxtNombrePer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombrePer.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombrePer.Name = "TxtNombrePer"
         Me.TxtNombrePer.ReadOnly = True
         Me.TxtNombrePer.Size = New System.Drawing.Size(436, 22)
@@ -1041,7 +1021,7 @@ Partial Class FrmBiblioteca
         'TxtCodigoPer
         '
         Me.TxtCodigoPer.Location = New System.Drawing.Point(139, 48)
-        Me.TxtCodigoPer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtCodigoPer.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCodigoPer.Name = "TxtCodigoPer"
         Me.TxtCodigoPer.Size = New System.Drawing.Size(164, 22)
         Me.TxtCodigoPer.TabIndex = 90
@@ -1059,22 +1039,31 @@ Partial Class FrmBiblioteca
         'Button7
         '
         Me.Button7.Location = New System.Drawing.Point(389, 382)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(4)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(144, 28)
         Me.Button7.TabIndex = 66
         Me.Button7.Text = "Jaja perdido"
         Me.Button7.UseVisualStyleBackColor = True
         '
-        'CheckedListBox2
+        'ListBox
         '
-        Me.CheckedListBox2.FormattingEnabled = True
-        Me.CheckedListBox2.Items.AddRange(New Object() {"Gaaa", "1", "2", "3"})
-        Me.CheckedListBox2.Location = New System.Drawing.Point(139, 220)
-        Me.CheckedListBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.CheckedListBox2.Name = "CheckedListBox2"
-        Me.CheckedListBox2.Size = New System.Drawing.Size(644, 106)
-        Me.CheckedListBox2.TabIndex = 65
+        Me.ListBox.FormattingEnabled = True
+        Me.ListBox.Items.AddRange(New Object() {"Gaaa", "1", "2", "3"})
+        Me.ListBox.Location = New System.Drawing.Point(139, 220)
+        Me.ListBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.ListBox.Name = "ListBox"
+        Me.ListBox.Size = New System.Drawing.Size(644, 106)
+        Me.ListBox.TabIndex = 65
+        '
+        'BtnLimpiar
+        '
+        Me.BtnLimpiar.Location = New System.Drawing.Point(450, 288)
+        Me.BtnLimpiar.Name = "BtnLimpiar"
+        Me.BtnLimpiar.Size = New System.Drawing.Size(108, 28)
+        Me.BtnLimpiar.TabIndex = 33
+        Me.BtnLimpiar.Text = "Limpiar"
+        Me.BtnLimpiar.UseVisualStyleBackColor = True
         '
         'FrmBiblioteca
         '
@@ -1082,7 +1071,7 @@ Partial Class FrmBiblioteca
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(915, 566)
         Me.Controls.Add(Me.TabBiblioteca)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmBiblioteca"
         Me.Text = "FormularioBiblioteca"
         Me.TabBiblioteca.ResumeLayout(False)
@@ -1127,7 +1116,7 @@ Partial Class FrmBiblioteca
     Friend WithEvents Label1 As Windows.Forms.Label
     Friend WithEvents TabDevolucionLibro As Windows.Forms.TabPage
     Friend WithEvents Button2 As Windows.Forms.Button
-    Friend WithEvents CheckedListBox3 As Windows.Forms.CheckedListBox
+    Friend WithEvents ListBoxDev As Windows.Forms.CheckedListBox
     Friend WithEvents TabPerdidaLibro As Windows.Forms.TabPage
     Friend WithEvents TabAgregarLibro As Windows.Forms.TabPage
     Friend WithEvents BtnAgregarLibro As Windows.Forms.Button
@@ -1146,7 +1135,7 @@ Partial Class FrmBiblioteca
     Friend WithEvents Label39 As Windows.Forms.Label
     Friend WithEvents BtnBuscarAlumnoPre As Windows.Forms.Button
     Friend WithEvents Button7 As Windows.Forms.Button
-    Friend WithEvents CheckedListBox2 As Windows.Forms.CheckedListBox
+    Friend WithEvents ListBox As Windows.Forms.CheckedListBox
     Friend WithEvents TabEditarLibro As Windows.Forms.TabPage
     Friend WithEvents btnAgreLibro As Windows.Forms.Button
     Friend WithEvents Label40 As Windows.Forms.Label
@@ -1162,8 +1151,6 @@ Partial Class FrmBiblioteca
     Friend WithEvents Label46 As Windows.Forms.Label
     Friend WithEvents Label47 As Windows.Forms.Label
     Friend WithEvents CboCodigoEdit As Windows.Forms.ComboBox
-    Friend WithEvents TxtCodigoAgre As Windows.Forms.TextBox
-    Friend WithEvents Label48 As Windows.Forms.Label
     Friend WithEvents BtnBuscarAlumnoDev As Windows.Forms.Button
     Friend WithEvents TxtEstadoDev As Windows.Forms.TextBox
     Friend WithEvents Label9 As Windows.Forms.Label
@@ -1189,4 +1176,5 @@ Partial Class FrmBiblioteca
     Friend WithEvents Button3 As Windows.Forms.Button
     Friend WithEvents TxtEdicionAgre As Windows.Forms.TextBox
     Friend WithEvents TxtEdicionEdit As Windows.Forms.TextBox
+    Friend WithEvents BtnLimpiar As Windows.Forms.Button
 End Class

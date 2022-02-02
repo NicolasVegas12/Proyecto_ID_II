@@ -9,3 +9,14 @@ C:\Users\User\Desktop\super-duper-octo-sniffle-main\Entidades\obj\Debug\Entidade
 C:\Users\User\Desktop\super-duper-octo-sniffle-main\Entidades\obj\Debug\Entidades.dll
 C:\Users\User\Desktop\super-duper-octo-sniffle-main\Entidades\obj\Debug\Entidades.xml
 C:\Users\User\Desktop\super-duper-octo-sniffle-main\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Entidades\bin\Debug\Entidades.dll
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Entidades\bin\Debug\Entidades.xml
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Entidades\obj\Debug\Entidades.vbprojAssemblyReference.cache
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Entidades\obj\Debug\Entidades.Resources.resources
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Entidades\obj\Debug\Entidades.vbproj.GenerateResource.cache
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Entidades\obj\Debug\Entidades.vbproj.CoreCompileInputs.cache
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Entidades\obj\Debug\Entidades.dll
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Entidades\obj\Debug\Entidades.xml
+C:\Users\Minenick\Escritorio\UNT\Proyecto boy\AccesoDatos\Entidades\obj\Debug\Entidades.pdb

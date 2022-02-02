@@ -4,14 +4,13 @@ Public Class PrestamoAD
     Dim conexion As New Conexion
     Dim cn As SqlConnection
     Dim da As SqlDataAdapter
-    Public Sub InsertarPrestamo(objP As Prestamo)
+    Public Sub InsertarPrestamo(nroCarnet As String)
         cn = conexion.conectar
         Try
             da = New SqlDataAdapter("sp_prestamo", cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
-                .Add("@nroCarnet", SqlDbType.Char).Value = objP.NroCarnet
-                .Add("@IdPrestamo", SqlDbType.Char).Value = objP.Prestamo
+                .Add("@nroCarnet", SqlDbType.Char).Value = nroCarnet
                 .Add("@tipo", SqlDbType.TinyInt).Value = 1
             End With
             cn.Open()

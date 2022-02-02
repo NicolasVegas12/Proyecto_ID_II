@@ -2,6 +2,7 @@
 Imports Entidades
 Imports System.Data
 Public Class FrmBiblioteca
+    Private registrado As Boolean = False
     Private Sub BtnBuscarAlumnoxCodigo_Click(sender As Object, e As EventArgs) Handles BtnBuscarAlumnoPre.Click
         Dim objA As String
         Dim AlumnosLN As New AlumnosLN
@@ -17,6 +18,7 @@ Public Class FrmBiblioteca
                 TxtCodigoPre.Enabled = False
                 BtnBuscarAlumnoPre.Enabled = False
                 BtnPrestar.Enabled = True
+
             Else
                 MsgBox("Codigo Equivocado")
                 TxtCodigoPre.Text = ""
@@ -30,21 +32,60 @@ Public Class FrmBiblioteca
     Private Sub BtnBuscarAlumnoDev_Click(sender As Object, e As EventArgs) Handles BtnBuscarAlumnoDev.Click
         Dim objA As String
         Dim AlumnosLN As New AlumnosLN
+        Dim ListaL As New ListaLibrosPrestadosLN
+        Dim dtl As New DataTable
         objA = TxtCodigoDev.Text
-        TxtNombreDev.Text = AlumnosLN.ObtenerAlumnoLN(objA).Rows(0).Item(0)
-        TxtCicloDev.Text = AlumnosLN.ObtenerAlumnoLN(objA).Rows(0).Item(1)
-        TxtCarreraDev.Text = AlumnosLN.ObtenerAlumnoLN(objA).Rows(0).Item(2)
-        TxtEstadoDev.Text = AlumnosLN.ObtenerAlumnoLN(objA).Rows(0).Item(3)
+
+        If objA <> "" Then
+            dtl = ListaL.ListarPrestamosXAlumnoLN(objA)
+            If (dtl.Rows.Count > 0) Then
+
+                TxtNombreDev.Text = AlumnosLN.ObtenerAlumnoLN(objA).Rows(0).Item(0)
+                TxtCicloDev.Text = AlumnosLN.ObtenerAlumnoLN(objA).Rows(0).Item(1)
+                TxtCarreraDev.Text = AlumnosLN.ObtenerAlumnoLN(objA).Rows(0).Item(2)
+                TxtEstadoDev.Text = AlumnosLN.ObtenerAlumnoLN(objA).Rows(0).Item(3)
+                ListBoxDev.Items.Clear()
+                For i As Integer = 0 To dtl.Rows.Count - 1
+                    ListBoxDev.Items.Add(dtl.Rows(i).Item(0))
+                Next
+            Else
+                MsgBox("No se encontraron prestamos de este alumno o el codigo esta mal escrito")
+            End If
+        Else
+            MsgBox("Codigo Vacio")
+        End If
+
+
+
     End Sub
 
     Private Sub BtnBuscarAlumnoPer_Click(sender As Object, e As EventArgs) Handles BtnBuscarAlumnoPer.Click
         Dim objA As String
         Dim AlumnosLN As New AlumnosLN
-        objA = TxtCodigoDev.Text
-        TxtNombrePer.Text = AlumnosLN.ObtenerAlumnoLN(objA).Rows(0).Item(0)
-        TxtCicloPer.Text = AlumnosLN.ObtenerAlumnoLN(objA).Rows(0).Item(1)
-        TxtCarreraPer.Text = AlumnosLN.ObtenerAlumnoLN(objA).Rows(0).Item(2)
-        TxtEstadoPer.Text = AlumnosLN.ObtenerAlumnoLN(objA).Rows(0).Item(3)
+        Dim ListaL As New ListaLibrosPrestadosLN
+        Dim dtl As New DataTable
+        objA = TxtCodigoPer.Text
+
+        If objA <> "" Then
+            dtl = ListaL.ListarLibrosXAlumnoLN(objA)
+            If (dtl.Rows.Count > 0) Then
+                TxtNombrePer.Text = AlumnosLN.ObtenerAlumnoLN(objA).Rows(0).Item(0)
+                TxtCicloPer.Text = AlumnosLN.ObtenerAlumnoLN(objA).Rows(0).Item(1)
+                TxtCarreraPer.Text = AlumnosLN.ObtenerAlumnoLN(objA).Rows(0).Item(2)
+                TxtEstadoPer.Text = AlumnosLN.ObtenerAlumnoLN(objA).Rows(0).Item(3)
+                ListBox.Items.Clear()
+
+                For i As Integer = 0 To dtl.Rows.Count - 1
+                    ListBox.Items.Add(dtl.Rows(i).Item(0) + "-" + dtl.Rows(i).Item(1))
+                Next
+            Else
+                MsgBox("No se encontraron prestamos de este alumno o el codigo esta mal escrito")
+            End If
+        Else
+            MsgBox("Codigo Vacio")
+        End If
+
+
     End Sub
 
     Private Sub BtnAgregarLibro_Click(sender As Object, e As EventArgs) Handles BtnAgregarLibro.Click
@@ -58,7 +99,19 @@ Public Class FrmBiblioteca
         objL.Stock = TxtStockAgre.Text
         objL.FechaEdicion = TxtEdicionAgre.Text
 
-        LibroLN.agregarLibro(objL)
+        If LibroLN.agregarLibro(objL) Then
+            MsgBox("Libro Agregado")
+            TxtTituloAgre.Text = ""
+            TxtStockAgre.Text = ""
+            TxtEdicionAgre.Text = ""
+            Dim dtL As DataTable = LibroLN.ListarLibroLN()
+            CboCodigoEdit.DataSource = dtL
+
+        Else
+            MsgBox("Error al agregar el libro")
+        End If
+
+
 
     End Sub
 
@@ -209,7 +262,11 @@ Public Class FrmBiblioteca
                 ListBoxLibros.Items.Add(dtLibros.Rows(i).Item(1) + "-" + dtLibros.Rows(i).Item(0))
             Next
 
-
+            CboEditorial.Enabled = False
+            CboIdioma.Enabled = False
+            CboAutor.Enabled = False
+            CboArea.Enabled = False
+            BtnAplicarFiltros.Enabled = False
         Else
             MsgBox("No se encontraron libros compatibles")
         End If
@@ -222,6 +279,51 @@ Public Class FrmBiblioteca
     End Sub
 
     Private Sub BtnPrestar_Click(sender As Object, e As EventArgs) Handles BtnPrestar.Click
-        MsgBox(ListBoxLibros.CheckedItems.Count)
+        Dim objPLN As New PrestamoLN
+        Dim objLPLN As New ListaLibrosPrestadosLN
+        If ListBoxLibros.CheckedItems.Count > 0 Then
+            objPLN.InsertarPrestamoLN(TxtCodigoPre.Text)
+            For Each item In ListBoxLibros.CheckedItems
+                Dim list() As String = Split(item, "-")
+                Dim objP As New ListaLibroPrestado
+                objP.NroCarnet = TxtCodigoPre.Text
+                objP.IdLibro = list(1)
+                objLPLN.registrarLibrosPrestadosLN(objP)
+            Next
+            MsgBox("Prestamo Registrado")
+        Else
+            MsgBox("No se han seleccionado libros")
+        End If
+
+    End Sub
+
+    Private Sub BtnLimpiar_Click(sender As Object, e As EventArgs) Handles BtnLimpiar.Click
+        CboAutor.Text = ""
+        CboAutor.SelectedValue = 0
+        CboAutor.Enabled = True
+
+        CboArea.Text = ""
+        CboArea.SelectedValue = 0
+        CboArea.Enabled = True
+
+        CboEditorial.Text = ""
+        CboEditorial.SelectedValue = 0
+        CboEditorial.Enabled = True
+
+        CboIdioma.Text = ""
+        CboIdioma.SelectedValue = 0
+        CboIdioma.Enabled = True
+
+        BtnAplicarFiltros.Enabled = True
+        ListBoxLibros.Items.Clear()
+
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
     End Sub
 End Class

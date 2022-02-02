@@ -6,10 +6,10 @@ Public Class PrestamoLN
         Dim objPrestamo As New PrestamoAD
         Return objPrestamo.LlenarPrestamos()
     End Function
-    Public Function InsertarPrestamoLN(objA As Prestamo) As Boolean
+    Public Function InsertarPrestamoLN(nroCarnet As String) As Boolean
         Try
             Dim objAD As New PrestamoAD
-            objAD.InsertarPrestamo(objA)
+            objAD.InsertarPrestamo(nroCarnet)
             Return True
         Catch e As Exception
             MsgBox("error: " & e.Message)
