@@ -7,7 +7,7 @@ Integrantes:
 
 <br>-  Ayala Mendoza Gerald Eduardo
 
-<br>- Cabrera Toribio Christopher Frazier
+<br>-  Cabrera Toribio Christopher Frazier
 
 <br>- Espinoza Sánchez José Alejandro
 
