@@ -5,11 +5,15 @@ Carrera: Ing de sistemas
 --------------
 Integrantes:
 
--Ayala Mendoza Gerald Eduardo
--Cabrera Toribio Christopher Frazier
--Espinoza Sánchez Jose Alejandro
--Marino Ramos Diego Alejandro
--Vegas Capristán Nicolás Benjamin
+<br>-Ayala Mendoza Gerald Eduardo
+
+<br>-Cabrera Toribio Christopher Frazier
+
+<br>-Espinoza Sánchez Jose Alejandro
+
+<br>-Marino Ramos Diego Alejandro
+
+<br>-Vegas Capristán Nicolás Benjamin
 
 -------------
 
