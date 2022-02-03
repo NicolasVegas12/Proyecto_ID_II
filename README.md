@@ -5,7 +5,7 @@ Carrera: Ing de sistemas
 --------------
 Integrantes:
 
-<br>- Ayala Mendoza Gerald Eduardo
+<br>-  Ayala Mendoza Gerald Eduardo
 
 <br>- Cabrera Toribio Christopher Frazier
 
