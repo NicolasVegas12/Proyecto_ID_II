@@ -5,19 +5,19 @@ Carrera: Ing de sistemas
 --------------
 Integrantes:
 
-<br>-Ayala Mendoza Gerald Eduardo
+<br>- Ayala Mendoza Gerald Eduardo
 
-<br>-Cabrera Toribio Christopher Frazier
+<br>- Cabrera Toribio Christopher Frazier
 
-<br>-Espinoza Sánchez José Alejandro
+<br>- Espinoza Sánchez José Alejandro
 
-<br>-Marino Ramos Diego Alejandro
+<br>- Marino Ramos Diego Alejandro
 
-<br>-Vegas Capristán Nicolás Benjamin
+<br>- Vegas Capristán Nicolás Benjamin
 
 -------------
 
 Docente:
-Ing. Luis Boy Chavil.
+Dr. Luis Boy Chavil.
 
 -------------
