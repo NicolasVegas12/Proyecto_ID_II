@@ -18,6 +18,6 @@ Integrantes:
 -------------
 
 Docente:
-Dr. Luis Boy Chavil.
+Dr. Luis Boy Chavil
 
 -------------
