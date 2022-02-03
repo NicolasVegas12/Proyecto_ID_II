@@ -11,7 +11,7 @@ Integrantes:
 
 <br>-  Espinoza Sánchez José Alejandro
 
-<br>- Marino Ramos Diego Alejandro
+<br>-  Marino Ramos Diego Alejandro
 
 <br>- Vegas Capristán Nicolás Benjamin
 
