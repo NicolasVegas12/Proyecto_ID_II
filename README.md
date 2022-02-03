@@ -18,6 +18,6 @@ Integrantes:
 -------------
 
 Docente:
-Ing. Luis Boy Chavil
+Ing. Luis Boy Chavil.
 
 -------------
