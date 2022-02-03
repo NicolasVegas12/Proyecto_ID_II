@@ -9,7 +9,7 @@ Integrantes:
 
 <br>-Cabrera Toribio Christopher Frazier
 
-<br>-Espinoza Sánchez Jose Alejandro
+<br>-Espinoza Sánchez José Alejandro
 
 <br>-Marino Ramos Diego Alejandro
 
