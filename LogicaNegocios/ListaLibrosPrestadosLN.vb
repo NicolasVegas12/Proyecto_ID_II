@@ -12,10 +12,10 @@ Public Class ListaLibrosPrestadosLN
             Return False
         End Try
     End Function
-    Public Function devolverLibrosPrestadosLN(IdPrestamo As Char, IdLibro As String) As Boolean
+    Public Function devolverLibrosPrestadosLN(IdPrestamo As String, nroCarnet As String) As Boolean
         Try
             Dim objAD As New ListaLibrosPrestadosAD
-            objAD.DevolverLibro(IdPrestamo, IdLibro)
+            objAD.DevolverLibro(IdPrestamo, nroCarnet)
             Return True
         Catch e As Exception
             MsgBox("error: " & e.Message)
@@ -38,7 +38,7 @@ Public Class ListaLibrosPrestadosLN
         Dim objLibrosP As New ListaLibrosPrestadosAD
         Return objLibrosP.ListarLibrosxAlumno(nroCodigo)
     End Function
-    Public Function ReportarPerdidoLN(IdPrestamo As Char, IdLibro As String) As Boolean
+    Public Function ReportarPerdidoLN(IdPrestamo As String, IdLibro As String) As Boolean
         Try
             Dim objAD As New ListaLibrosPrestadosAD
             objAD.ReportarPerdido(IdPrestamo, IdLibro)

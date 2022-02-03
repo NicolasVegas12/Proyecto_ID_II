@@ -1043,7 +1043,7 @@ Partial Class FrmBiblioteca
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(144, 28)
         Me.Button7.TabIndex = 66
-        Me.Button7.Text = "Jaja perdido"
+        Me.Button7.Text = "Reportar perdido"
         Me.Button7.UseVisualStyleBackColor = True
         '
         'ListBox

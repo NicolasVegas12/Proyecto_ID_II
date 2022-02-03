@@ -24,13 +24,13 @@ Public Class ListaLibrosPrestadosAD
         End Try
     End Sub
 
-    Public Function DevolverLibro(IdPrestamo As Char, IdLibro As String) As Boolean
+    Public Function DevolverLibro(IdPrestamo As String, nroCarnet As String) As Boolean
         cn = conexion.conectar
         Try
             da = New SqlDataAdapter("sp_LibrosPrestados", cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
-                .Add("@IdLibro", SqlDbType.Char).Value = IdLibro
+                .Add("@NroCarnet", SqlDbType.Char).Value = nroCarnet
                 .Add("@IdPrestamo", SqlDbType.Char).Value = IdPrestamo
                 .Add("@tipo", SqlDbType.Int).Value = 2
             End With
@@ -45,6 +45,8 @@ Public Class ListaLibrosPrestadosAD
             cn.Close()
         End Try
     End Function
+
+
 
     Public Function ListarLibrosPrestadosTotales() As DataTable
         cn = conexion.conectar
@@ -66,9 +68,8 @@ Public Class ListaLibrosPrestadosAD
         da.Fill(dt)
         Return dt
     End Function
-    Public Function ReportarPerdido(IdPrestamo As Char, IdLibro As String) As Boolean
+    Public Function ReportarPerdido(IdPrestamo As String, IdLibro As String) As Boolean
         cn = conexion.conectar
-        cn.Open()
         Try
             da = New SqlDataAdapter("sp_LibrosPrestados", cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure

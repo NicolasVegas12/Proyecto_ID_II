@@ -76,7 +76,7 @@ Public Class FrmBiblioteca
                 ListBox.Items.Clear()
 
                 For i As Integer = 0 To dtl.Rows.Count - 1
-                    ListBox.Items.Add(dtl.Rows(i).Item(0) + "-" + dtl.Rows(i).Item(1))
+                    ListBox.Items.Add(dtl.Rows(i).Item(0) + "-" + dtl.Rows(i).Item(2) + "-" + dtl.Rows(i).Item(1))
                 Next
             Else
                 MsgBox("No se encontraron prestamos de este alumno o el codigo esta mal escrito")
@@ -201,7 +201,8 @@ Public Class FrmBiblioteca
         CboIdioma.SelectedValue = 0
 
         ListBoxLibros.Items.Clear()
-
+        ListBoxDev.Items.Clear()
+        ListBox.Items.Clear()
 
 
     End Sub
@@ -291,6 +292,8 @@ Public Class FrmBiblioteca
                 objLPLN.registrarLibrosPrestadosLN(objP)
             Next
             MsgBox("Prestamo Registrado")
+            ListBoxLibros.Items.Clear()
+
         Else
             MsgBox("No se han seleccionado libros")
         End If
@@ -320,10 +323,40 @@ Public Class FrmBiblioteca
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Try
+            If ListBox.CheckedItems.Count > 0 Then
+                For Each item In ListBox.CheckedItems
+                    Dim objLN As New ListaLibrosPrestadosLN
+                    Dim perd() As String = Split(item, "-")
+                    objLN.ReportarPerdidoLN(perd(2), perd(1))
+                Next
+                ListBox.Items.Clear()
+                MsgBox("Libros Reportados")
+            Else
+                MsgBox("No se han seleccionado ningun libro")
+            End If
 
+        Catch ex As Exception
+            MsgBox(ex)
+        End Try
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Try
+            If ListBoxDev.CheckedItems.Count > 0 Then
+                For Each item In ListBoxDev.CheckedItems
+                    Dim objLN As New ListaLibrosPrestadosLN
+                    objLN.devolverLibrosPrestadosLN(item.ToString, TxtCodigoDev.Text.ToString)
+                Next
+                ListBoxDev.Items.Clear()
+                MsgBox("Libros devueltos")
+            Else
+                MsgBox("No se han seleccionado ningun prestamo")
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex)
+        End Try
 
     End Sub
 End Class
