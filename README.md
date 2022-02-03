@@ -13,7 +13,7 @@ Integrantes:
 
 <br>-  Marino Ramos Diego Alejandro
 
-<br>- Vegas Capristán Nicolás Benjamin
+<br>-  Vegas Capristán Nicolás Benjamin
 
 -------------
 
