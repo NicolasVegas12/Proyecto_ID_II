@@ -212,7 +212,7 @@ Public Class FrmBiblioteca
         Dim objL As New Libro
         objL = objLN.SeleccionarLibro(CboCodigoEdit.SelectedValue)
         TxtTituloEdit.Text = CboCodigoEdit.SelectedValue
-        CboEditorialEdit.SelectedIndex = CboCodigoEdit.SelectedIndex
+        CboEditorialEdit.SelectedIndex = CboEditorialEdit.SelectedIndex
         CboAutorEdit.SelectedValue = objL.IdAutor
         CboAreaEdit.SelectedValue = objL.IdArea
         CboIdiomaEdit.SelectedValue = objL.IdIdioma
@@ -236,7 +236,7 @@ Public Class FrmBiblioteca
         Dim objL As New Libro
         objL.IdLibro = CboCodigoEdit.Text
         objL.Titulo = TxtTituloEdit.Text
-        objL.IdEditorial = CboCodigoEdit.SelectedValue
+        objL.IdEditorial = CboEditorialEdit.SelectedValue
         objL.IdAutor = CboAutorEdit.SelectedValue
         objL.IdArea = CboAreaEdit.SelectedValue
         objL.FechaEdicion = TxtEdicionEdit.Text
